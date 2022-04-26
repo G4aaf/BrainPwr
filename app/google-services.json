@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "62483900858",
+    "project_id": "brainpwr-2043a",
+    "storage_bucket": "brainpwr-2043a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62483900858:android:cdb1ef420af2f959219583",
+        "android_client_info": {
+          "package_name": "fr.isen.rouveure.brainpwr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62483900858-k175irga13vtpcj1i08hfns8bjm9eduk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4rzJ04WLwpKEp-9PohaxRjtbG-6Zx2sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62483900858-k175irga13vtpcj1i08hfns8bjm9eduk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

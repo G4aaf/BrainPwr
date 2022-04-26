@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">BrainPwr</string>
+    <string name="welcome">Bienvenue sur BrainPwr</string>
+    <string name="name">User name</string>
+    <string name="game">JOUER</string>
+    <string name="quizz">QUIZZ</string>
+    <string name="sleep">SOMMEIL</string>
+    <string name="cart_title">Rendez-vous</string>
+    <string name="appointment">Calendrier</string>
+    <string name="profile_title">Profile</string>
+    <string name="profile">Votre Profile</string>
+    <string name="information">Informations</string>
+    <string name="profile_first_name">Nom</string>
+    <string name="prof_first_name_rep">Monster</string>
+    <string name="profile_last_name">Prénom</string>
+    <string name="prof_last_name_rep">Pierrique</string>
+    <string name="profile_adresss">Adresse</string>
+    <string name="prof_adress_rep">666 rue du diable</string>
+    <string name="profile_mail">e-mail</string>
+    <string name="prof_mail_rep">brainPwr@gmail.com</string>
+    <string name="medical_problems">Problèmes médicaux</string>
+    <string name="disease">Parkinson</string>
+    <string name="modification">modifier</string>
+    <string name="profile_subscription">Abonnement</string>
+    <string name="prof_subscription_rep">"Pas d'abonnement "</string>
+    <string name="credit_card">Carte de paiment</string>
+    <string name="cards">Moyen de paiment</string>
+    <string name="calandar">Calendrier</string>
+</resources>
