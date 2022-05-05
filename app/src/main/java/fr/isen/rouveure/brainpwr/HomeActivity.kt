@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import fr.isen.rouveure.brainpwr.databinding.ActivityHomeBinding
-import fr.isen.rouveure.brainpwr.game.PlayActivity
 import fr.isen.rouveure.brainpwr.game.WelcomeActivity
 import fr.isen.rouveure.brainpwr.quizz.QuizzActivity
+import fr.isen.rouveure.brainpwr.sleep.BluetoothActivity
 import fr.isen.rouveure.brainpwr.sleep.SleepActivity
 
 class HomeActivity : AppCompatActivity() {

@@ -7,8 +7,8 @@
     <string name="sleep">SOMMEIL</string>
     <string name="cart_title">Rendez-vous</string>
     <string name="appointment">Calendrier</string>
-    <string name="profile_title">Profile</string>
-    <string name="profile">Votre Profile</string>
+    <string name="profile_title">Profil</string>
+    <string name="profile">Votre Profil</string>
     <string name="information">Informations</string>
     <string name="profile_first_name">Nom</string>
     <string name="prof_first_name_rep">Monster</string>
@@ -26,4 +26,5 @@
     <string name="credit_card">Carte de paiment</string>
     <string name="cards">Moyen de paiment</string>
     <string name="calandar">Calendrier</string>
+    <string name="log_in">Connexion</string>
 </resources>
