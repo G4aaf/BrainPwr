@@ -16,8 +16,8 @@ class GameView(var c:Context, var gameTask : GameTask): View(c) {
     private var speed = 1
     private var time = 0
     private var score = 0
-    private var myCarPosition = 0
-    private val otherCars = ArrayList<HashMap<String,Any>>()
+    private var myPlayerPosition = 0
+    private val eggs = ArrayList<HashMap<String,Any>>()
 
     var viewWidth = 0
     var viewHeight = 0
@@ -34,18 +34,18 @@ class GameView(var c:Context, var gameTask : GameTask): View(c) {
             val map = HashMap<String,Any>()
             map["lane"] = (0..2).random()
             map["startTime"] = time
-            otherCars.add(map)
+            eggs.add(map)
         }
         time = time + 10 + speed
-        val carWidth = viewWidth / 5
-        val carHeight = carWidth + 10
+        val eggsWidth = viewWidth / 5
+        val eggsHeight = eggsWidth + 10
         myPaint!!.style = Paint.Style.FILL
         val d = resources.getDrawable(R.drawable.player, null)
 
         d.setBounds(
-            myCarPosition * viewWidth / 3 + viewWidth /15 +25,
-            viewHeight-2 - carHeight,
-            myCarPosition * viewWidth / 3 + viewWidth / 15 + carWidth - 25,
+            myPlayerPosition * viewWidth / 3 + viewWidth /15 +25,
+            viewHeight-2 - eggsHeight,
+            myPlayerPosition * viewWidth / 3 + viewWidth / 15 + eggsWidth - 25,
             viewHeight - 2
         )
 
@@ -53,26 +53,26 @@ class GameView(var c:Context, var gameTask : GameTask): View(c) {
         myPaint!!.color = Color.GREEN
         var highScore = 0
 
-        for (i in otherCars.indices){
+        for (i in eggs.indices){
             val value = try {
-                val carX = otherCars[i]["lane"] as Int * viewWidth / 3 + viewWidth / 15
-                var carY = time - otherCars[i]["startTime"] as Int
+                val eggsX = eggs[i]["lane"] as Int * viewWidth / 3 + viewWidth / 15
+                var eggsY = time - eggs[i]["startTime"] as Int
                 val d2 = resources.getDrawable(R.drawable.eggs, null)
 
                 d2.setBounds(
-                    carX + 25, carY - carHeight, carX + carWidth - 25, carY
+                    eggsX + 25, eggsY - eggsHeight, eggsX + eggsWidth - 25, eggsY
                 )
 
                 d2.draw(canvas)
-                if (otherCars[i]["lane"] as Int == myCarPosition) {
-                    if (carY > viewHeight - 2 - carHeight
-                        && carY < viewHeight - 2) {
+                if (eggs[i]["lane"] as Int == myPlayerPosition) {
+                    if (eggsY > viewHeight - 2 - eggsHeight
+                        && eggsY < viewHeight - 2) {
                         gameTask.closeGame(score)
                     }
                 }
-                if (carY <= viewHeight + carHeight) {
+                if (eggsY <= viewHeight + eggsHeight) {
                 } else {
-                    otherCars.removeAt(i)
+                    eggs.removeAt(i)
                     score++
                     speed = 1 + Math.abs(score / 8)
                     if (score <= highScore) {
@@ -97,13 +97,13 @@ class GameView(var c:Context, var gameTask : GameTask): View(c) {
             MotionEvent.ACTION_MOVE -> {
                 val x1 = event.x
                 if (x1 < viewWidth/2) {
-                    if (myCarPosition < 0) {
-                        myCarPosition--
+                    if (myPlayerPosition < 0) {
+                        myPlayerPosition--
                     }
                 }
                 if (x1 > viewWidth / 2) {
-                    if (myCarPosition < 2) {
-                        myCarPosition++
+                    if (myPlayerPosition < 2) {
+                        myPlayerPosition++
                     }
                 }
                 invalidate()

@@ -21,7 +21,7 @@ class SleepActivity : AppCompatActivity() {
 
         //if the user wants to access sleep routine
         binding.btnConnectBluetooth.setOnClickListener{
-            val intent = Intent(this, BluetoothActivity::class.java)
+            val intent = Intent(this, BLEScanActivity::class.java)
             startActivity(intent)
         }
     }

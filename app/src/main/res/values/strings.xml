@@ -27,4 +27,13 @@
     <string name="cards">Moyen de paiment</string>
     <string name="calandar">Calendrier</string>
     <string name="log_in">Connexion</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ble_scan_play">Pause le scan BLE</string>
+    <string name="ble_scan_pause">Lancer le scan BLE</string>
+    <string name="ble_scan_device_error">BLE non disponible sur cet appareil</string>
+    <string name="ble_device_disconnected">Statut déconnecté</string>
+    <string name="ble_device_connected">Statut connecté</string>
 </resources>
