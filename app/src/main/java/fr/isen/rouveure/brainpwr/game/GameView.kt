@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.nfc.Tag
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Toast
@@ -93,22 +95,26 @@ class GameView(var c:Context, var gameTask : GameTask): View(c) {
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        when(event!!.action){
-            MotionEvent.ACTION_MOVE -> {
-                val x1 = event.x
-                if (x1 < viewWidth/2) {
-                    if (myPlayerPosition < 0) {
-                        myPlayerPosition--
+        when(event!!.action){ // Quand tu appuie sur l'ecran
+            MotionEvent.ACTION_MOVE -> { // l'action de déplacement s'éffectue
+                val x1 = event.x  // x1 prend la position du joeur
+                if (x1 < viewWidth/2) { // si x1 est inférieur a la taille de l'écran /2
+                    if (myPlayerPosition >= 1 ) { // verification qu'il soit pas a l'étremiter gauche
+                        Log.d("debug", ": if 1:  " + myPlayerPosition)
+                        myPlayerPosition -= 1 // déplacer le joueur a gauche
                     }
+
                 }
-                if (x1 > viewWidth / 2) {
-                    if (myPlayerPosition < 2) {
-                        myPlayerPosition++
+                if (x1 > viewWidth/2) { // si x1 est inférieur a la taille de l'écran /2
+
+                    if (myPlayerPosition < 2  ) { // verification qu'il soit pas a l'étremiter droite
+                        Log.d("debug", ": if 2: " + myPlayerPosition)
+                        myPlayerPosition += 1 // déplacer le joeur a droite
                     }
                 }
                 invalidate()
             }
-            MotionEvent.ACTION_UP -> {}
+            MotionEvent.ACTION_UP -> {} // effectuer a chaque touche de l'écran
         }
 
         return true
