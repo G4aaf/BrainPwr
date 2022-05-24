@@ -10,10 +10,10 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" /> <!-- Firebase permissions. -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,16 +23,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BrainPwr">
         <activity
+            android:name=".PatientGold.ReleasePaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientGold.AbonnementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".quizz.ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".sleep.BLEScanActivity"
             android:exported="false" />
         <activity
             android:name=".sleep.BleDeviceActivity"
             android:exported="false" />
         <activity
-            android:name=".sleep.BluetoothActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
+            android:name=".Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

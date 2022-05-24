@@ -1,4 +1,4 @@
-package fr.isen.rouveure.brainpwr
+package fr.isen.rouveure.brainpwr.Login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,14 +7,23 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import fr.isen.rouveure.brainpwr.HomeActivity
+import fr.isen.rouveure.brainpwr.R
 import fr.isen.rouveure.brainpwr.databinding.ActivityLoginBinding
+
 import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
 
+
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,12 +32,16 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
         firebaseAuth = FirebaseAuth.getInstance()
+        val uid = firebaseAuth.currentUser?.uid
+        databaseReference = FirebaseDatabase.getInstance("https://brainpwr-2043a-default-rtdb.europe-west1.firebasedatabase.app").getReference("Users")
+        val database = Firebase.database
+        val myRef = database.getReference("User")
+
 
         //change of view between login and registration
         binding.singUp.setOnClickListener {
@@ -92,11 +105,29 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.eMails.text.toString()
             val pass = binding.passwordET.text.toString()
             val confirmPass = binding.confirmPassword.text.toString()
+            val firstName = binding.firstName.text.toString()
+            val lastName = binding.lastName.text.toString()
+            val address = binding.postalAdresse.text.toString()
 
-            if (email.isNotEmpty() && isEmailValid(email) && pass.isNotEmpty() && pass?.count() ?: 0 >= 6 && confirmPass.isNotEmpty()){
+
+            if (email.isNotEmpty() && isEmailValid(email) && pass.isNotEmpty() && pass?.count() ?: 0 >= 6 && confirmPass.isNotEmpty() && firstName.isNotEmpty() && lastName.isNotEmpty() && address.isNotEmpty()){
                 if (pass == confirmPass){
+
+
                     firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
                         if (it.isSuccessful){
+
+                            val user = User(firstName,lastName,address,email)
+                            if (uid != null) {
+                                databaseReference.child(uid).setValue(user).addOnCompleteListener {
+                                    if (it.isSuccessful) {
+                            myRef.setValue("user")
+                                    }else {
+                                        Toast.makeText(this, "failed to upload profile" , Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                            }
+
                             val intent = Intent(this, HomeActivity::class.java)
                             startActivity(intent)
                         }else {

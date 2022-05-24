@@ -43,7 +43,7 @@
 
         </LinearLayout>
         <TextView
-            android:text="+33678905434"
+            android:text="+336XXXXXXXX"
             android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/black"

@@ -25,6 +25,7 @@ class PlayActivity : AppCompatActivity(), GameTask {
         score = findViewById(R.id.score)
         mGameView = GameView(this, this)
 
+        // Play when user click on btn play
         val action = supportActionBar
         action?.hide()
         playBtn.setOnClickListener{

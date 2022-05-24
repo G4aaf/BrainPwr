@@ -36,4 +36,8 @@
     <string name="ble_scan_device_error">BLE non disponible sur cet appareil</string>
     <string name="ble_device_disconnected">Statut déconnecté</string>
     <string name="ble_device_connected">Statut connecté</string>
+
+    <!-- Test add link doctolib -->
+    <string name="text_link_ehs"> <a href="https://www.doctolib.fr">https://www.doctolib.fr</a></string>
+    <string name="text_go_to"><a href="https://tutorial.eyehunts.com//">Go to EyeHunts</a></string>
 </resources>

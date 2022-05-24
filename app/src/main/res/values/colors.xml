@@ -12,4 +12,5 @@
     <color name="turquoise">#2596be</color>
     <color name="textColor">#ECE5EC</color>
     <color name="transparentColor">#00FFFFFF</color>
+    <color name="contourBtnQuizz">#E91E63</color>
 </resources>

@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/default_option_border_bg.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1574074074074074" />
+        <entry key="app/src/main/res/drawable/option_border_result_finish.xml" value="0.21510416666666668" />
+        <entry key="app/src/main/res/drawable/selected_option_border_bg.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/drawable/switch_trcks.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/drawable/switch_tumbs.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/activity_ble_device.xml" value="0.1" />
@@ -18,17 +21,23 @@
         <entry key="app/src/main/res/layout/activity_device_watch.xml" value="0.1793478260869565" />
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_paiment.xml" value="0.19861334770483927" />
         <entry key="app/src/main/res/layout/activity_play.xml" value="0.1628057761236815" />
-        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.19864845750660523" />
-        <entry key="app/src/main/res/layout/activity_quizz.xml" value="0.1743659420289855" />
-        <entry key="app/src/main/res/layout/activity_schedule.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.21212121212121213" />
+        <entry key="app/src/main/res/layout/activity_quizz.xml" value="0.219982221699141" />
+        <entry key="app/src/main/res/layout/activity_release_payment.xml" value="0.184375" />
+        <entry key="app/src/main/res/layout/activity_result.xml" value="0.20653017662185735" />
+        <entry key="app/src/main/res/layout/activity_schedule.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_sleep.xml" value="0.15752804641720472" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/cell_ble_characteristic.xml" value="0.14945652173913043" />
         <entry key="app/src/main/res/layout/item_add.xml" value="0.23333333333333334" />
-        <entry key="app/src/main/res/layout/item_image.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_image.xml" value="0.1423487165067072" />
+        <entry key="app/src/main/res/layout/item_option_one.xml" value="0.4056092794000126" />
+        <entry key="app/src/main/res/layout/item_option_three.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_option_two.xml" value="0.1" />
         <entry key="app/src/main/res/layout/items_email.xml" value="0.19166666666666668" />
         <entry key="app/src/main/res/layout/items_info.xml" value="0.18614130434782608" />
       </map>
