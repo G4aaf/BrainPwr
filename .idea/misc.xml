@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/selected_option_border_bg.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/drawable/switch_trcks.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/drawable/switch_tumbs.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/activity_abonnement.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_ble_device.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_ble_service.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_ble_service_adapter.xml" value="0.1" />

@@ -112,9 +112,9 @@ class QuizzActivity : AppCompatActivity(), View.OnClickListener {
         // TODO (STEP 6: Check here if the position of question is last then change the text of the button.)
         // START
         if (mCurrentPosition == mQuestionsList!!.size) {
-             btn_submit.text = "FINISH"
+             btn_submit.text = "FINI"
         } else {
-            btn_submit.text = "CONFIMER"
+            btn_submit.text = "QUESTION SUIVANTE"
         }
         // END
 

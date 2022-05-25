@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import fr.isen.rouveure.brainpwr.R
-import fr.isen.rouveure.brainpwr.databinding.ActivityHomeBinding
 import fr.isen.rouveure.brainpwr.databinding.ActivitySleepBinding
 
 class SleepActivity : AppCompatActivity() {

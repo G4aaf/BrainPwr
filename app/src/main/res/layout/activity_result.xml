@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Result"
+        android:text="Resultat"
         android:textColor="@android:color/white"
         android:textSize="70sp"
         android:textStyle="bold" />
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/default_option_border_bg"
-        android:text="FINISH"
+        android:text="FIN"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
